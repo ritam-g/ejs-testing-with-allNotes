@@ -2,7 +2,7 @@ name: CD — Test & Deploy
 
 on:
   push:
-    branches: [main]    # only runs when code lands on main
+    branches: [master]    # only runs when code lands on main
 
 jobs:
 

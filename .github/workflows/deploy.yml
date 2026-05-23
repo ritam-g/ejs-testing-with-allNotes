@@ -2,7 +2,7 @@ name: CD — Test & Deploy
 
 on:
   push:
-    branches: [master]    # only runs when code lands on main
+    branches: [master]    # only runs when code lands on master branch
 
 jobs:
 
@@ -22,7 +22,7 @@ jobs:
     name: Deploy to Production
     runs-on: ubuntu-latest
     needs: test              # ← waits for test job to succeed
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
 
     steps:
       - uses: actions/checkout@v4
